@@ -3,7 +3,10 @@
     "version":"0.0.1",
     "description":"A js package aimed at exploring the thesaurus of a word.",
     "main":"./thesaurus.js",
-    "keywords":["english","word","dictionary","thesaurus","synonym","antonym","noun","adjective"],
-    "author":"Devang Gaur <devang.gaur.7@gmail.com,devang.only@gmail.com>",
+	"dependencies" : {
+		"unirest" : "~0.4.2"
+	},
+    "keywords":["english","word","dictionary","thesaurus","synonym","antonym","noun","adjective","verb"],
+    "author":"Devang Gaur <devang.gaur.7@gmail.com,devang.only@gmail.com,www.github.com/drunken-saint>",
     "licence":"MIT"
 }

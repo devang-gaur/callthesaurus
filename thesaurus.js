@@ -12,8 +12,6 @@ module.exports=function(word,cb){
     unirest.get("http://words.bighugelabs.com/api/2/179b92829817af021068cae049a071ea/"+word+"/json")
     .header("Accept", "application/json")
     .end(function (res) {
-        
-      console.log(obj);
 
       if(res.status==200)
       {
@@ -44,10 +42,9 @@ module.exports=function(word,cb){
       }
       else
       {
-       obj.found=true;
+       obj.found=false;
       }
 
-      console.log(obj);
       cb(obj);
 
     });
