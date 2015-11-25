@@ -6,6 +6,13 @@
 	"dependencies" : {
 		"unirest" : "~0.4.2"
 	},
+    "scripts" : {
+        "test" : "node test.js"        
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/drunken-saint/callthesaurus.git"
+    },
     "keywords":["english","word","dictionary","thesaurus","synonym","antonym","noun","adjective","verb"],
     "author":"Devang Gaur <devang.gaur.7@gmail.com,devang.only@gmail.com,www.github.com/drunken-saint>",
     "licence":"MIT"
