@@ -1,0 +1,9 @@
+{
+    "name":"callthesaurus",
+    "version":"0.0.1",
+    "description":"A js package aimed at exploring the thesaurus of a word.",
+    "main":"./thesaurus.js",
+    "keywords":["english","word","dictionary","thesaurus","synonym","antonym","noun","adjective"],
+    "author":"Devang Gaur <devang.gaur.7@gmail.com,devang.only@gmail.com>",
+    "licence":"MIT"
+}
