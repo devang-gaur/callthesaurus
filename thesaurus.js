@@ -9,7 +9,7 @@ var obj={
 
 module.exports=function(word,cb){
     
-    unirest.get("http://words.bighugelabs.com/api/2/179b92829817af021068cae049a071ea/"+word+"/json")
+    unirest.get("http://words.bighugelabs.com/api/2/179b92829817af021068cae049a071ea/"+word.trim()+"/json")
     .header("Accept", "application/json")
     .end(function (res) {
 
