@@ -1,6 +1,6 @@
 # callthesaurus
 A js package aimed at exploring the thesaurus of a word.
-Why the name "callthesaurus" ? Well, the package exposes a callback function to facilitate the manipulation of the javascript object which bears the response of the function call.
+Why the name "callthesaurus" ? Well, the package exposes a callback function to facilitate the manipulation of the javascript object which bears the response of the function call. So, callback + thesaurus = callthesaurus .
 
 #NPM
 
