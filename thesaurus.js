@@ -2,9 +2,7 @@ const unirest=require('unirest');
 
 var obj={
             found : false,
-            type : "",
-            synonyms : [],
-            antonyms : []
+            type : []
         };
 
 module.exports=function(word,cb){
@@ -13,39 +11,56 @@ module.exports=function(word,cb){
     .header("Accept", "application/json")
     .end(function (res) {
 
-      if(res.status==200)
-      {
-        obj.found=true;
-        var result=JSON.parse(res.body);
-        for(var i in result)
-        {
-            obj.type=i;
-            for(var j in result[i])
+
+          if(res.status==200)
+          {
+            obj.found=true;
+            
+            var result=JSON.parse(res.body);
+            
+            for(var i in result)
             {
-                if(j=="syn")
+                obj.type.push(i);
+                obj.type[i]={synonyms:[],antonyms:[]};
+                
+                for(var j in result[i])
                 {
-                    for(var k=0 in result[i][j])
-                    {   
-                        obj.synonyms.push(result[i][j][k]);
-                    }
-                }
-                if(j=="ant")
-                {
-                    for(var k=0 in result[i][j])
+                    if(j=="syn")
                     {
-                        obj.antonyms.push(result[i][j][k]);
+                        for(var k=0 in result[i][j])
+                        {   
+                            obj.type[i].synonyms.push(result[i][j][k]);
+                        }
+                    }
+                    if(j=="ant")
+                    {
+                        for(var k=0 in result[i][j])
+                        {
+                            obj.type[i].antonyms.push(result[i][j][k]);
+                        }
                     }
                 }
             }
-        }
-        
-      }
-      else
-      {
-       obj.found=false;
-      }
+            
+          }
+          else
+          {
+           obj.found=false;
+          }
 
-      cb(obj);
+
+        var temp=[];
+        for(var i in obj.type)
+        {
+            if(obj.type[i] instanceof Object)
+            {
+                temp[i]=obj.type[i];
+            }
+
+        }
+        obj.type=temp;
+
+        cb(obj);
 
     });
 };
