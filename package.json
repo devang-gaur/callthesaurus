@@ -3,11 +3,11 @@
     "version":"1.0.1",
     "description":"A js package aimed at exploring the thesaurus of a word.",
     "main":"./thesaurus.js",
-	"dependencies" : {
-		"unirest" : "~0.4.2"
-	},
+    "dependencies" : {
+        "unirest" : "~0.4.2"
+    },
     "scripts" : {
-        "test" : "node test.js"        
+        "test" : "node test.js"
     },
     "repository": {
         "type": "git",
