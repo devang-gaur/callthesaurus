@@ -1,6 +1,6 @@
 {
     "name":"callthesaurus",
-    "version":"1.0.1",
+    "version":"1.0.2",
     "description":"A js package aimed at exploring the thesaurus of a word.",
     "main":"./thesaurus.js",
     "dependencies" : {
