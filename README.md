@@ -1,26 +1,40 @@
 # callthesaurus
-A module aimed at exploring the thesaurus of a word.  
-Why the name "callthesaurus" ? Well, the package exposes a callback function to facilitate the manipulation of the  javascript object which bears the response of the function call. So, callback + thesaurus = callthesaurus .  
+
+    A simple package aimed at exploring the thesaurus of a word.  
+    Why the name "callthesaurus" ? Well, the package exposes a callback function to facilitate the manipulation of the  javascript object which bears the response of the function call. So, callback + thesaurus = callthesaurus .  
 
 #NPM
 
     npm install callthesaurus  
 
 
-#Example
+####Getting started
 
-var thesaurus=require('callthesaurus');
+    The package uses the api: http://words.bighugelabs.com/api.php  
+    You're required to get an API KEY for your own app.
 
-thesaurus("cold",function(obj){  
-    console.log(obj);  
-});  
+####Example
 
-####Output:
+    var thesaurus=require('callthesaurus');
 
-{  
-    found : true,  
-    type :  
-    [adjective:{synonyms:['slate','frigid',.....],antonyms:['hot']},  
-        noun:{synonyms:['common cold','coldness','low temperature'.....],antonyms:[hotness]}  
-    ]  
-}
+	var myFun = function(obj){  
+        console.log(obj);  
+    }
+	
+    thesaurus("cold", myFun, API_KEY);  
+
+######Output:
+
+    {  
+        found : true,  
+        type :  [
+            adjective:{
+                synonyms:['slate','frigid',.....],
+                antonyms:['hot']
+            },  
+            noun:{
+                synonyms:['common cold','coldness','low temperature'.....],
+                antonyms:[hotness]
+            }  
+        ]  
+    }
